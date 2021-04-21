@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
 import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR'
@@ -12,7 +13,6 @@ type Episode = {
   id : string;
   title: string;
   thumbnail: string;
-  description: string;
   members: string;
   duration: number;
   durationAsString: string;
@@ -43,7 +43,9 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
 
 
               <div className="episodeDetails">
-                <a href="">{episode.title}</a>
+                <Link href={`/episodes/${episode.id}`}>
+                  <a>{episode.title}</a>
+                </Link>
                 <p>{episode.members}</p>
                 <span>{episode.publishedAt}</span>
                 <span>{episode.durationAsString}</span>
@@ -84,7 +86,9 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
                 </td>
 
                 <td>
-                  <a href="">{episode.title}</a>
+                  <Link href={`/episodes/${episode.id}`}>
+                    <a>{episode.title}</a>
+                  </Link>
                 </td>
 
                 <td>{episode.members}</td>
