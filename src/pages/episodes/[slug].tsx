@@ -64,20 +64,24 @@ export default function Episode({episode} : EpisodeProps){
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const { slug } = context.params;
-  
-  // const { data } = await api.get(`episode`)
+  const { data } = await api.get('episodes', {
+    params: {
+      _limit: 2,
+      _sort: 'published_at',
+      _order: 'desc',
+    }
+  });
 
-  // const episode = {
-  //   ...data,
-  //   publishedAt: format(parseISO(data.published_at), 'd MMM yy', { locale: ptBr }),
-  //   duration: Number(data.file.duration),
-  //   durationAsString: convertDurationToTimeString(Number(data.file.duration)),
-  //   url: data.file.url
-  // }
+  const paths = data.map(episode => {
+    return {
+      params: {
+        slug: episode.id
+      }
+    }
+  })
 
   return {
-    paths: [],
+    paths,
     fallback: 'blocking'
   }
 };
