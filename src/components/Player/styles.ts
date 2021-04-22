@@ -24,6 +24,28 @@ export const Container = styled.header`
     font-weight: 600;
   }
 
+  .currentEpisode{
+    text-align: center;
+
+    img {
+      border-radius: 1.5rem;
+    }
+
+    strong {
+      display: block;
+      margin-top: 2rem;
+      font: 600 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    span {
+      display: block;
+      margin-top: 1rem;
+      opacity: 0.6;
+      line-height: 1.5rem;
+    }
+  }
+
   .emptyPlayer{
     height: 20rem;
 
@@ -84,12 +106,25 @@ export const Footer = styled.footer`
       background: transparent;
       border: 0;
       font-size: 0;
+      transition: filter 0.2s ease;
+
+      &:disabled{
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.85);
+      }
 
       &.playButton {
         width: 4rem;
         height: 4rem;
         border-radius: 1rem;
         background: ${({ theme }) => theme.colors.purple_400};
+
+        &:hover{
+          filter: brightness(0.95);
+        }
       }
     }
   }
