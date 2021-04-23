@@ -11,12 +11,14 @@ export function Header(){
 
   return(
     <Container>
-      <Link href="/">
-        <a>
-          <img src="/logo.svg" alt="logo"/>
-        </a>
-      </Link>
-      <p>O melhor para você ouvir, sempre</p>
+      <div>
+        <Link href="/">
+          <a>
+            <img src="/logo.svg" alt="logo"/>
+          </a>
+        </Link>
+        <p>O melhor para você ouvir, sempre</p>
+      </div>
       <span>{currentDate}</span>
     </Container>
   )

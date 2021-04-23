@@ -9,9 +9,21 @@ export const Container = styled.div`
     margin-top: 3rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 900px){
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 679px){
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 400px){
+    padding: 0 1rem;
+  }
 `;
 
-export const LatestEpisodes = styled.section`
+export const LatestEpisodes = styled.section`  
   ul{
     list-style: none;
     display: grid;
@@ -109,13 +121,52 @@ export const LatestEpisodes = styled.section`
       }
     }
   }
+
+  @media (max-width: 900px){
+    ul{
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 600px){
+    ul li div:first-child{
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 400px){
+    ul{
+      display: flex;
+      flex-direction:column;
+
+      li{
+        width: 100%;
+
+        .episodeDetails{
+          width: 100%;
+
+          a{
+            display: -webkit-box;
+            word-break: break-word;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            width: 100%;
+          }
+        } 
+      }
+    }
+  }
 `;
 
 export const AllEpisodes = styled.section`
   padding-bottom: 2rem;
+  overflow: scroll;
   
   table {
     width: 100%;
+    overflow-x: scroll;
 
     th, td {
       padding: 0.75rem 1rem;

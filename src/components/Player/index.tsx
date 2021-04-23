@@ -46,8 +46,10 @@ export function Player(){
             src={episode.thumbnail}
             objectFit='cover'
           />
-          <strong>{episode.title}</strong>
-          <span>{episode.members}</span>
+          <div className='episodeInfo'>
+            <strong>{episode.title}</strong>
+            <span>{episode.members}</span>
+          </div>
         </div>
       ) : (
         <div className="emptyPlayer">
