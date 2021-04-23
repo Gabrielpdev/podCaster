@@ -222,6 +222,14 @@ export const Footer = styled.footer`
           filter: brightness(0.95);
         }
       }
+
+      &.isActive{
+        filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+
+        &:hover{
+          filter: brightness(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+        }
+      }
     }
   }
   
