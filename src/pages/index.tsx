@@ -27,14 +27,16 @@ type HomeProps = {
 }
 
 export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
-  const { play } = usePlayer()
+  const { playList } = usePlayer()
   
+  const episodeList = [...latestEpisodes, ...allEpisodes]
+
   return (
     <Container>
       <LatestEpisodes>
         <h2>Últimos lançamentos</h2>
         <ul>
-          {latestEpisodes.map(episode => (
+          {latestEpisodes.map((episode, index) => (
             <li key={episode.id}>
               <Image 
                 width={192} 
@@ -54,7 +56,7 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
                 <span>{episode.durationAsString}</span>
               </div>
 
-              <button type="button" onClick={() => play(episode)}>
+              <button type="button" onClick={() => playList(episodeList, index)}>
                 <img src="/play-green.svg" alt="tocar episódio"/>
               </button>
             </li>
@@ -65,47 +67,49 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
       <AllEpisodes>
         <h2>Todos episódios</h2>
 
-        <table cellSpacing={0}>
-          <thead>
-            <th></th>
-            <th>Podcast</th>
-            <th>Integrantes</th>
-            <th>Data</th>
-            <th>Duração</th>
-            <th></th>
-          </thead>
+        <div className="container">
+          <table cellSpacing={0}>
+            <thead>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </thead>
 
-          <tbody>
-            {allEpisodes.map(episode => (
-              <tr key={episode.id}>
-                <td style={{width: 72}}>
-                  <Image 
-                    width={120} 
-                    height={120} 
-                    src={episode.thumbnail} 
-                    alt={episode.title}
-                    objectFit='cover'
-                  />
-                </td>
+            <tbody>
+              {allEpisodes.map((episode, index) => (
+                <tr key={episode.id}>
+                  <td style={{width: 72}}>
+                    <Image 
+                      width={120} 
+                      height={120} 
+                      src={episode.thumbnail} 
+                      alt={episode.title}
+                      objectFit='cover'
+                    />
+                  </td>
 
-                <td>
-                  <Link href={`/episodes/${episode.id}`}>
-                    <a>{episode.title}</a>
-                  </Link>
-                </td>
+                  <td>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a>{episode.title}</a>
+                    </Link>
+                  </td>
 
-                <td>{episode.members}</td>
-                <td style={{width: 100}} >{episode.publishedAt}</td>
-                <td>{episode.durationAsString}</td>
-                <td>
-                  <button type="button" onClick={() => play(episode)}>
-                    <img src="/play-green.svg" alt="tocar episódio"/>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                  <td>{episode.members}</td>
+                  <td style={{width: 100}} >{episode.publishedAt}</td>
+                  <td>{episode.durationAsString}</td>
+                  <td>
+                    <button type="button" onClick={() => playList(episodeList, (index + latestEpisodes.length))}>
+                      <img src="/play-green.svg" alt="tocar episódio"/>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </AllEpisodes>
     </Container>
   )

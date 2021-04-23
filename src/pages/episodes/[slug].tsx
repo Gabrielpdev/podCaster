@@ -10,6 +10,7 @@ import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
 import { Container, ThumbnailContainer } from '../../styles/pages/Episode';
+import { usePlayer } from '../../contexts/PlayerContext';
 
 type Episode = {
   id : string;
@@ -28,7 +29,7 @@ type EpisodeProps = {
 }
 
 export default function Episode({episode} : EpisodeProps){
-  const { query } = useRouter();
+  const { play } = usePlayer();
 
   return (
     <Container>
@@ -46,7 +47,7 @@ export default function Episode({episode} : EpisodeProps){
           objectFit='cover'
         />
 
-        <button type="button">
+        <button type="button" onClick={() => play(episode)}>
           <img src="/play.svg" alt="tocar episódio"/>
         </button>
       </ThumbnailContainer>

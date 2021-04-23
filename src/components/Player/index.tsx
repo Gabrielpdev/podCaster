@@ -13,7 +13,11 @@ export function Player(){
     togglePlay, 
     episodeList, 
     isPlaying,
-    setPlayingState
+    setPlayingState,
+    playNext,
+    playPrevious,
+    hasNext,
+    hasPrevious
   } = usePlayer()
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -88,7 +92,7 @@ export function Player(){
           <button type="button" disabled={!episode}>
             <img src="/shuffle.svg" alt="embaralhar"/>
           </button>
-          <button type="button" disabled={!episode}>
+          <button type="button" disabled={!episode || !hasPrevious} onClick={() => playPrevious()}>
             <img src="/play-previous.svg" alt="tocar anterior"/>
           </button>
 
@@ -105,7 +109,7 @@ export function Player(){
             )}
           </button>
 
-          <button type="button" disabled={!episode}>
+          <button type="button" disabled={!episode || !hasNext} onClick={() => playNext()}>
             <img src="/play-next.svg" alt="tocar próxima"/>
           </button>
           <button type="button" disabled={!episode}>

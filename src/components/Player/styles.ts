@@ -151,7 +151,8 @@ export const Container = styled.header`
     padding: 1rem;
 
     .emptyPlayer{
-      width: 90%;
+      width: 100%;
+      margin: 0;
     }
   }
 `;
@@ -159,7 +160,7 @@ export const Container = styled.header`
 export const Footer = styled.footer`
   align-self: stretch;
       
-  &.empty{
+  &.empty .progress{
     opacity: 0.5;
   }
 
@@ -203,6 +204,7 @@ export const Footer = styled.footer`
       transition: filter 0.2s ease;
 
       &:disabled{
+        opacity: 0.5;
         cursor: not-allowed;
       }
 

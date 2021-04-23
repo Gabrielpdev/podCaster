@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: 0 4rem;
-  height: calc(100vh - 6.5rem);
-  overflow-y: scroll;
+  height: calc(100vh - 9.5rem);
   
   h2 {
     margin-top: 3rem;
@@ -162,11 +161,14 @@ export const LatestEpisodes = styled.section`
 
 export const AllEpisodes = styled.section`
   padding-bottom: 2rem;
-  overflow: scroll;
-  
+
+  .container{
+    max-height: 27rem;
+    overflow: auto;
+  }
+    
   table {
     width: 100%;
-    overflow-x: scroll;
 
     th, td {
       padding: 0.75rem 1rem;
