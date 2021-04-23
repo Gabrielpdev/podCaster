@@ -1,4 +1,5 @@
-import { GetServerSideProps } from 'next';
+import { Head } from 'next/document';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { format, parseISO } from 'date-fns';
@@ -116,7 +117,7 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const { data } = await api.get('episodes', {
     params: {
       _limit: 12,
@@ -141,5 +142,6 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
       latestEpisodes,
       allEpisodes,
     },
+    revalidate: 60 * 60 * 8,
   }
 }
