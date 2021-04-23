@@ -75,7 +75,6 @@ export const ThumbnailContainer = styled.div`
     }
 
     &:last-child{
-      right: 0;
       top: 50%;
       background: ${({ theme }) => theme.colors.green_500};
       transform: translate(-50%, -50%);
