@@ -1,3 +1,4 @@
+import { Head } from 'next/document';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -33,6 +34,7 @@ export default function Home({allEpisodes, latestEpisodes}: HomeProps) {
 
   return (
     <Container>
+
       <LatestEpisodes>
         <h2>Últimos lançamentos</h2>
         <ul>

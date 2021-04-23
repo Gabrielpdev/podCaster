@@ -1,7 +1,7 @@
+import { Head } from 'next/document';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import { format, parseISO } from 'date-fns';
 import ptBr from 'date-fns/locale/pt-BR'
@@ -33,6 +33,7 @@ export default function Episode({episode} : EpisodeProps){
 
   return (
     <Container>
+
       <ThumbnailContainer>
         <Link href="/">
           <button type="button">
