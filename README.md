@@ -24,7 +24,7 @@
 </p>
 
 <h2 align="center">
-    <img alt="podCaster" title="#podCaster" src=".github/Preview.png" width="350px" />
+    <img alt="podCaster" title="#podCaster" src=".github/Preview.png" width="650px" />
 </h2>
 
 <p align="center">
@@ -48,14 +48,11 @@ podCaster is an application maked during the **NWL 5.0** offer by [Rocketseat] :
 This application is a player podcast, responsive to any device, maked using technology like NextJs and custom hooks. </br>
 
 <span align="center">
-	<h2>Desktop</h2>
-	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif"  />
+	<h2>Demo</h2>
+	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif" width="680px"  />
+	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" height="300px" />
 </span>
 
-<span align="center">
-	<h2>Mobile</h2>
-	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" />
-</span>
 
 ## 🏁 Initializing <a name = "getting_started"></a>
 
@@ -74,7 +71,7 @@ The following tools were used in the construction of the project:
 - 🔵 [TypeScript][typescript]
 - ⚛️ [React][reactjs]
 - 💅 [Styled-components][styled-components]
-
+- 🔼 [NextJs][next]
 ## 👨‍💼 Development goals <a name = "roadmap"></a>
 - Develop the Podcast system.
 - User can pause and resume where he left off.
@@ -96,5 +93,6 @@ Made with ❤️ by Gabriel Pereira 👋🏽 [Contact!](https://www.linkedin.com
 [rs]: https://rocketseat.com.br
 [Rocketseat]:https://github.com/Rocketseat
 [styled-components]:https://styled-components.com/
+[next]: https://nextjs.org/
 
 
