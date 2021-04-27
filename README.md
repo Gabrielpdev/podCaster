@@ -28,8 +28,8 @@
 </h2>
 
 <p align="center">
-  <a href="https://github.com/Gabrielpdev/podCaster/README.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Gabrielpdev/podCaster/README-PT.md">Portuguese</a>
+  <a href="https://github.com/Gabrielpdev/podCaster/blob/main/README.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Gabrielpdev/podCaster/blob/main/README-PT.md">Portuguese</a>
 </p>
 
 ## 📝 Content
