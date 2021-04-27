@@ -50,8 +50,8 @@ com o NextJs e com uso de hook customizados para o players dos podcasts.<br/>
 
 <span align="center">
 	<h2>Demo</h2>
-	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif" width="680px"  />
-	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" height="300px" />
+	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif" width="750px"  />
+	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" height="370px" />
 </span>
 
 ## 🏁 Iniciando <a name = "getting_started"></a>
