@@ -49,8 +49,8 @@ This application is a player podcast, responsive to any device, maked using tech
 
 <span align="center">
 	<h2>Demo</h2>
-	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif" width="680px"  />
-	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" height="300px" />
+	<img alt="podCaster" title="#podCaster" src=".github/podCaster.gif" width="700px"  />
+	<img alt="podCaster" title="#podCaster" src=".github/mobile.gif" height="350px" />
 </span>
 
 
