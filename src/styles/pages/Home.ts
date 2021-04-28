@@ -133,7 +133,7 @@ export const LatestEpisodes = styled.section`
     }
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 500px){
     ul{
       display: flex;
       flex-direction:column;
@@ -160,7 +160,6 @@ export const LatestEpisodes = styled.section`
 `;
 
 export const AllEpisodes = styled.section`
-  padding-bottom: 2rem;
 
   .container{
     max-height: 27rem;
@@ -181,6 +180,16 @@ export const AllEpisodes = styled.section`
       color: ${({ theme }) => theme.colors.gray_200};
       font: 500 0.75rem Lexend, sans-serif;
       text-align: left;
+
+      td:nth-child(3){
+
+      }
+
+      @media (max-width: 650px){
+        td:first-child{
+          display: none !important;
+        }
+      }
     }
 
     td {
@@ -226,6 +235,21 @@ export const AllEpisodes = styled.section`
           filter: brightness(0.95);
         }
       }
+
+      @media (max-width: 750px){
+        font-size: 0.75rem;
+
+        a{
+          font-size: 0.87rem;
+        }
+      }
     }
+  }
+
+  @media(max-width: 900px){
+    padding-bottom: 7rem;
+  }
+  @media(max-width: 400px){
+    padding-bottom: 13rem;
   }
 `;
