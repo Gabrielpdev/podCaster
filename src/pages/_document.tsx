@@ -32,11 +32,22 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          />
+          
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap" rel="stylesheet" />
         
           <title>Podcaster</title>
+
+          <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/favicon.png" type="image/png"/>
+
+          <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+          <meta name="theme-color" content="#8257E5" />
         </Head>
         <body>
           <Main />
