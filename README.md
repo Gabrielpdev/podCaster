@@ -46,6 +46,7 @@
 
 podCaster is an application maked during the **NWL 5.0** offer by [Rocketseat] :rocket:.<br/>
 This application is a player podcast, responsive to any device, maked using technology like NextJs and custom hooks. </br>
+ </br> <span>Site: https://pod-caster.vercel.app/</span>
 
 <span align="center">
 	<h2>Demo</h2>
